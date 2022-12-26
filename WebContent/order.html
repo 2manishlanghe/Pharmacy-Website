@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Order here</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<!-- navbar -->
+<header>
+    <div id="Header">
+      <div class="container-fluid">
+        <nav class="navbar navbar-dark navbar-expand-md" style="background-color:#004d80;">
+          <a class="navbar-brand" href="">
+            <h3>Auro-Pharma</h3>
+          </a>
+          <button data-toggle="collapse" data-target="#navbarToggler" type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Products</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="order.html">Order</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="aboutus.html">About Us</a>
+              </li>
+              
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!-- register -->
+   <div class="container register"><br>
+  	<h1 class="text-secondary text-center">
+  	<i class="fa fa-user-circle fa-3x text-center" aria-hidden="true"></i>
+		<br>
+  	  	Register to Order
+  	</h1><br><br>
+  	<div class="col-lg-8 m-auto d-block">
+  <form action="#" onsubmit="return validation()" class="primary-background">
+  <div class="form-group">
+  	<label>Username: </label><br>
+  	<input type="text" name="user" class="form-control" id="user" >
+  	<span id="username" class="text-danger font-weight-bold"></span>
+  </div><br>
+  <div class="form-group">
+  	<label>Password: </label><br>
+  	<input type="text" name="user" class="form-control" id="pass" >
+  	<span id="password" class="text-danger font-weight-bold"></span>
+  </div><br>
+  <div class="form-group">
+  	<label>Confirm Password: </label><br>
+  	<input type="text" name="user" class="form-control" id="conpass" >
+  	<span id="conpass" class="text-danger font-weight-bold"></span>
+  </div><br>
+  <div class="form-group">
+  	<label>Mobile Number : </label><br>
+  	<input type="text" name="user" class="form-control" id="mobilenumber" >
+  	<span id="mobnumber" class="text-danger font-weight-bold"></span>
+  </div><br>
+  <div class="form-group">
+  	<label>Email : </label><br>
+  	<input type="text" name="user" class="form-control" id="email">
+  	<span id="email" class="text-danger font-weight-bold"></span>
+  </div><br>
+  <input type="submit" value="submit" class="btn btn-primary">
+  </form>	<br><br>
+  	</div>
+    </div>
+    <br><br>
+    <footer class="footer">
+    <div class="container-fluid bottom-footer pt-2">
+      <div class="row">
+        <div class="col-12 text-center">
+          <p>Copyrights © 2022 - All rights reserved</p>
+        </div>
+      </div>
+    </div>
+    </footer>
+    <script type="text/javascript">
+  function validation() {
+	
+
+  var user = document.getElementById('user').value;
+  var pass = document.getElementById('pass').value;
+  var conpass = document.getElementById('conpass').value;
+  var mobnumber = document.getElementById('mobilenumber').value;
+  var email = document.getElementById('email').value;
+  
+  	if(user == ""){
+  		document.getElementById('username').innerHTML =" * Please fill out this field";
+  		return false;
+  	}
+  	if(user.lenght <= 2){
+  		document.getElementById('username').innerHTML =" * Username must be atleast 2 characters";
+  		return false;
+  	}
+  	if(!isNaN(user)){
+  		document.getElementById('username').innerHTML =" * Please fill characters only";
+  		return false;
+  	}
+  	if(pass == ""){
+  		document.getElementById('password').innerHTML =" * Please fill out this field";
+  		return false;
+  	}
+  	if(pass.lenght < 5){
+  		document.getElementById('password').innerHTML =" * password must be atleast 5 characters";
+  		return false;
+  	}
+  	if(pass!=conpass){
+  		document.getElementById('conpass').innerHTML =" * Password must be same";
+  		return false;
+  	}
+  	if(conpass == ""){
+  		document.getElementById('conpass').innerHTML =" * Please fill out this field";
+  		return false;
+  	}
+  	if(mobnumber == ""){
+  		document.getElementById('mobnumber').innerHTML =" * Please fill out this field";
+  		return false;
+  	}
+  	if(isNaN(mobnumber)){
+  		document.getElementById('mobnumber').innerHTML =" * Please fill Numbers only";
+  		return false;
+  	}
+  	if(mobnumber.lenght!=10){
+  		document.getElementById('mobnumber').innerHTML =" * Mobile number must be 10 digits only";
+  		return false;
+  	}
+  	
+  	if(email == ""){
+  		document.getElementById('email').innerHTML =" * Please fill out this field";
+  		return false;
+  	}
+  	if(email.indexOf('@')==0){
+  		document.getElementById('email').innerHTML =" * Please Enter valid Email";
+  		return false;
+  	}
+  }
+  </script>
+</body>
+</html>

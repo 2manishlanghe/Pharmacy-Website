@@ -1,0 +1,38 @@
+
+.container-fluid{
+  padding-left: 0;
+  padding-right: 0;
+}
+nav ul li a {
+	font-size: 1.1rem;
+	font-weight: 600;
+}
+.footer{
+	margin-top:20%;
+
+	}
+.bottom-footer{
+  background-color: #205295;
+  margin-top :50%;
+  width: 100%;
+}
+.bottom-footer p{
+  color: white;
+}
+.card{
+	height: 100px;
+}
+.primary-background{
+	background-color: #F9F9F9;
+	margin-top: 5px;
+}
+.register{
+	margin-top: 80px;
+	background-color: D2DAFF;
+
+body {
+	background-color: #CDF0EA;
+}
+.about{
+	background-color: #CDF0EA;
+}
